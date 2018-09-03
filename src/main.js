@@ -3,11 +3,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
-import {Button, Row, Col, Tabbar, TabbarItem} from 'vant'
+import {Button, Row, Col, Tabbar, TabbarItem, Swipe, SwipeItem, List} from 'vant'
 import SearchBar from './components/common/Search-bar.vue'
+import floorComponent from './components/common/floor-component.vue'
+import goodsInfo from './components/common/goods-info.vue'
 
-Vue.use(Button).use(Row).use(Col).use(Tabbar).use(TabbarItem)
+Vue.use(Button).use(Row).use(Col).use(Tabbar).use(TabbarItem).use(Swipe).use(SwipeItem).use(List)
 Vue.component(SearchBar.name, SearchBar)
+Vue.component(floorComponent.name, floorComponent)
+Vue.component(goodsInfo.name, goodsInfo)
 
 Vue.config.productionTip = false
 

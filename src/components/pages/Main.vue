@@ -5,7 +5,7 @@
                 <router-view />
             </keep-alive>
         </div>
-        <van-tabbar v-model="active" @click="changeTabbar">
+        <van-tabbar v-model="active" @click.native="changeTabbar(active)">
             <van-tabbar-item icon="shop">首页</van-tabbar-item>
             <van-tabbar-item icon="records">列表</van-tabbar-item>
             <van-tabbar-item icon="cart">购物车</van-tabbar-item>
@@ -18,44 +18,37 @@
 export default {
   data () {
     return{
-      active: 0,
-    //   nowPath: ''
+      active: 0
     }
   },
-//   created () {
-//     this.changeTabBarActive()
-//   },
-//   updated () {
-//     this.changeTabBarActive()    
-//   },
   methods: {
     changeTabbar (active) {
-      console.log(active)
+      // console.log(active)
       switch (active) {
         case 0:
-          this.$router.push({name: 'StoreHome'})
+          this.$router.push('/')
+          // console.log('home')
           break
         case 1:
-          this.$router.push({name: 'StoreRecords'})
+          this.$router.push('/storerecords')
+          // console.log('records')
           break
         case 2:
-          this.$router.push({name: 'StoreCart'})
+          this.$router.push('/storecart')
+          // console.log('cart')
           break
         case 3:
-          this.$router.push({name: 'StoreContact'})
+          this.$router.push('/storecontact')
+          // console.log('contact')
           break
       }
-    },
-    // changeTabBarActive () {
-    //     this.nowPath == this.$route.path
-    //     if (this.nowPath== '/StoreCart') {
-    //       this.active = 2
-    //     }
-    // }
+    }
   }
 }
 </script>
 
-<style>
-
+<style scoped>
+.main-div{
+  margin-bottom: 50px;
+}
 </style>

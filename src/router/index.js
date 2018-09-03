@@ -20,17 +20,17 @@ export default new Router({
           component: StoreHome
         },
         {
-          path: '/StoreRecords',
+          path: '/storerecords',
           name: 'StoreRecords',
           component: StoreRecords
         },
         {
-          path: '/StoreCart',
+          path: '/storecart',
           name: 'StoreCart',
           component: StoreCart
         },
         {
-          path: '/StoreContact',
+          path: '/storecontact',
           name: 'StoreContact',
           component: StoreContact
         }
