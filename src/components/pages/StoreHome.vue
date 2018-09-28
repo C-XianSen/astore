@@ -55,6 +55,7 @@
 
 <script>
 import axios from 'axios'
+import url from '@/serviceAPI.config.js'
 import {swiper, swiperSlide} from 'vue-awesome-swiper'
 import 'swiper/dist/css/swiper.css'
 
@@ -79,7 +80,7 @@ export default {
   },
   created () {
     axios({
-        url: 'https://www.easy-mock.com/mock/5b85fb6cb6eb682fc7f9f013/vueshop/index',
+        url: url.getStoreHomeInfo,
         method: 'get'
     })
     .then(res => {
